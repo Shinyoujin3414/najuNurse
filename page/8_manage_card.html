@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../resource/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../resource/css/body.css" rel="stylesheet">
+  <script src="../resource/lib/jquery-3.3.1.min.js"></script>
+  <script src="../resource/lib/html2canvas.min.js"></script>
+  <script src="../resource/lib/es6-promise.min.js"></script>
+  <script src="../resource/lib/es6-promise.auto.min.js"></script> 
+  <title>훈련생관리카드</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row gutters">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="card">
+          <div class="card-body p-0">
+            <div class="invoice-container">
+              <div class="invoice-header">
+
+                <div class="row gutters text-center">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="invoice-logo">
+                      &nbsp;
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row gutters">&nbsp;</div>
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <table class="table custom-table m-0">
+                      <thead>
+                        <tr>
+                          <th width="70%" rowspan="2"><h2><b>훈련생 관리카드</b></h2></th>
+                          <th width="15%">행 정</th>
+                          <th width="15%">원 장</th>
+                        </tr>
+                        <tr height="80px">
+                          <th>&nbsp;</th>
+                          <th>&nbsp;</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+              <div class="invoice-body">
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="table-responsive">
+                      <table class="table custom-table m-0" id="table">
+                        <tbody>
+                          <tr>
+                            <td style="background-color: #ff9933;">과정명</td>
+                            <td colspan="3">
+                              간호조무사 자격취득과정 ( 
+                              <input type="text" style="width:60px;border: 1px solid #e0e3ec;">회차)
+                            </td>
+                            <td rowspan="3" style="vertical-align: middle;" class="text-center" width="15%">사진</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #ff9933;">구분</td>
+                            <td colspan="3">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gubun" id="gubun_1">
+                                <label for="gubun_1">실업자</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input class="form-check-input" type="radio" name="gubun" id="gubun_2">
+                                <label for="gubun_2">재직자</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input class="form-check-input" type="radio" name="gubun" id="gubun_3">
+                                <label for="gubun_3">사업주위탁</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input class="form-check-input" type="radio" name="gubun" id="gubun_4">
+                                <label for="gubun_4">일반인</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input class="form-check-input" type="radio" name="gubun" id="gubun_5">
+                                <label for="gubun_5">기타</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #ff9933;">입학일</td>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td style="background-color: #ff9933;">수료일</td>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #ff9933;">성명</td>
+                            <td><input class="form-control" type="text"></td>
+                            <td style="background-color: #ff9933;">생년월일</td>
+                            <td colspan="2"><input class="form-control" type="text"  c></td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #ff9933;">연락처</td>
+                            <td><input class="form-control" type="text" placeholder="###-####-####"></td>
+                            <td style="background-color: #ff9933;">이메일</td>
+                            <td colspan="2"><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #ff9933;">주소</td>
+                            <td colspan="4"><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #ff9933;">최종학력</td>
+                            <td colspan="4">
+                              <input type="text" style="width:60px;border: 1px solid #e0e3ec;">년 &nbsp;&nbsp;&nbsp;&nbsp;
+                              <input type="text" style="width:40px;border: 1px solid #e0e3ec;">월 &nbsp;&nbsp;&nbsp;&nbsp;
+                              <input type="text" style="width:120px;border: 1px solid #e0e3ec;">학교 &nbsp;&nbsp;&nbsp;&nbsp;
+                              <input type="radio" name="school" id="school1">
+                              <label for="school1">졸업</label> /
+                              <input type="radio" name="school" id="school2">
+                              <label for="school2">재학</label>/
+                              <input type="radio" name="school" id="school3">
+                              <label for="school3">중퇴</label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #ff9933;">최종경력</td>
+                            <td colspan="4">
+                              근무지 <input type="text" style="width:100px;border: 1px solid #e0e3ec;"> &nbsp;&nbsp;&nbsp;&nbsp;
+                              근무직종 <input type="text" style="width:100px;border: 1px solid #e0e3ec;"> &nbsp;&nbsp;&nbsp;&nbsp;
+                              근무기간 <input type="text" style="width:300px;border: 1px solid #e0e3ec;"> &nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #ff9933;">자격사항</td>
+                            <td colspan="4">
+                              <table width="100%">
+                                <tbody>
+                                  <tr class="text-center">
+                                    <td width="35">종목 및 등급</td>
+                                    <td width="15">취득일자</td>
+                                    <td width="35">종목 및 등급</td>
+                                    <td width="15">취득일자</td>
+                                  </tr>
+                                  <tr>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #ff9933;">포상사항</td>
+                            <td colspan="4">
+                              <table width="100%">
+                                <tbody>
+                                  <tr class="text-center">
+                                    <td width="35">포상내용</td>
+                                    <td width="15">포상일자</td>
+                                    <td width="35">포상내용</td>
+                                    <td width="15">포상일자</td>
+                                  </tr>
+                                  <tr>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr class="text-center" style="background-color: #99ccff;">
+                            <td colspan="2" >훈련생 수준</td>
+                            <td colspan="3">담임의견</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2">
+                              <table width="100%">
+                                <tbody>
+                                  <tr>
+                                    <td width="30%">기능수준</td>
+                                    <td width="70%"><input class="form-control" type="text"></td>
+                                  </tr>
+                                  <tr>
+                                    <td>생활수준</td>
+                                    <td><input class="form-control" type="text"></td>
+                                  </tr>
+                                  <tr>
+                                    <td>성격</td>
+                                    <td><input class="form-control" type="text"></td>
+                                  </tr>
+                                  <tr>
+                                    <td>기타</td>
+                                    <td><input class="form-control" type="text"></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                            <td colspan="3">
+                              <textarea  class="form-control" rows="10"></textarea>
+                            </td>
+                          </tr>
+                          <tr class="text-center" style="background-color: #99ccff;">
+                            <td colspan="5">취업희망사항</td>
+                          </tr>
+                          <tr>
+                            <td colspan="5">
+                              <table width="100%" class="text-center">
+                                <thead>
+                                  <td width="8%">구분</td>
+                                  <td>희망지역</td>
+                                  <td>희망분야</td>
+                                  <td>희망업체</td>
+                                  <td>희망보수</td>
+                                  <td>근무형태</td>
+                                  <td>기타</td>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1지망</td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                  </tr>
+                                  <tr>
+                                    <td>2지망</td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                  </tr>
+                                  <tr>
+                                    <td>3지망</td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <input type="button" class="btn btn-secondary" value="제출" />
+              </div>
+              <br>
+            </div>
+
+            <div>&nbsp;</div>
+
+            <div class="invoice-container">
+              <div class="invoice-header">
+
+                <div class="row gutters text-center">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="invoice-logo">
+                      &nbsp;
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row gutters">&nbsp;</div>
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <table class="table custom-table m-0">
+                      <thead>
+                        <tr>
+                          <th width="80%" rowspan="2"><h2><b>상담일지</b></h2></th>
+                          <th width="20%">취업등급</th>
+                        </tr>
+                        <tr height="80px">
+                          <th>&nbsp;</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+              <div class="invoice-body">
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="table-responsive">
+                      <table class="table custom-table m-0" id="table">
+                        <tbody class="text-center">
+                          <tr>
+                            <td colspan="3" style="background-color: #ff9933;"><b>수강중 상담</b>(고충 상담 포함)</td>
+                          </tr>
+                          <tr>
+                            <td width="20%">날짜</td>
+                            <td width="60%">상담내용</td>
+                            <td width="20%">상담자</td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" style="background-color: #99ccff;"><b>수료전 상담</b>(고충 상담 포함)</td>
+                          </tr>
+                          <tr>
+                            <td>날짜</td>
+                            <td>상담내용</td>
+                            <td>상담자</td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" style="background-color: #33cc99;"><b>수료후 상담</b>(고충 상담 포함)</td>
+                          </tr>
+                          <tr>
+                            <td>날짜</td>
+                            <td>상담내용</td>
+                            <td>상담자</td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-control" type="text" placeholder="####-##-##"></td>
+                            <td><input class="form-control" type="text"></td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3"><b>상담후 피드백</b></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3">
+                              <textarea  class="form-control"></textarea>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <input type="button" class="btn btn-secondary" value="제출" />
+            </div>
+            <div class="row gutters">
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link active" href="../index.html">훈련생 훈련교육 만족도 설문</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./2_job_survey.html">구직욕구 자가진단 설문지</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./3_graduates_survey.html">훈련생과정 개발 설문지</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./4_privacy_agree.html">개인정보 활용동의서</a>
+              </div>
+              </div>
+            </div>
+            <div class="row gutters">
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./5_grievance.html">고충처리 대장</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./6_application_form.html">입학지원서</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./7_counseling_card.html">훈련생 설문카드</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./8_manage_card.html">훈련생 관리카드</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="target" style="display: none"></a>
+  <script src="../resource/js/jquery-1.10.2.min.js"></script>
+  <script src="../resource/js/bootstrap.bundle.min.js"></script>
+  <script src="./data/2_job_questionnaire.js"></script>
+
+  <script type="text/javascript">
+
+    $(":button").on('click', function(e) {
+      html2canvas(e.target.parentElement).then(function(canvas) {
+        if (navigator.msSaveBlob) {
+          var blob = canvas.msToBlob(); 
+          return navigator.msSaveBlob(blob, '훈련생관리카드.jpg'); 
+        } else { 
+          var el = document.getElementById("target");
+          el.href = canvas.toDataURL("image/jpeg");
+          el.download = '훈련생관리카드.jpg';
+          el.click();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

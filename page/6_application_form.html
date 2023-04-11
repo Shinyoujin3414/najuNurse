@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>구직욕구 자가진단 설문지</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../resource/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../resource/css/body.css" rel="stylesheet">
+  <script src="../resource/lib/jquery-3.3.1.min.js"></script>
+  <script src="../resource/lib/html2canvas.min.js"></script>
+  <script src="../resource/lib/es6-promise.min.js"></script>
+  <script src="../resource/lib/es6-promise.auto.min.js"></script> 
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row gutters">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="card">
+          <div class="card-body p-0">
+            <div class="invoice-container">
+              <div class="invoice-header">
+
+                <div class="row gutters text-center">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="invoice-logo">
+                      &nbsp;
+                    </div>
+                  </div>
+                </div>
+                <div class="row gutters">&nbsp;</div>
+              </div>
+              <div class="invoice-body">
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="table-responsive">
+                      <table class="table custom-table m-0">
+                        <tbody>
+                          <tr class="text-center">
+                            <td colspan="5"><h2><b>입학지원서</b></h2></td>
+                          </tr>
+                          <tr class="text-center">
+                            <td rowspan="3" width="10%" style="vertical-align: middle;">사진</td>
+                            <td width="10%">성명</td>
+                            <td width="20%"><input class="form-control" type="text"></td>
+                            <td width="10%">주민등록번호</td>
+                            <td width="20%"><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr class="text-center">
+                            <td>주소</td>
+                            <td><input class="form-control" type="text"></td>
+                            <td>e메일주소</td>
+                            <td><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr class="text-center">
+                            <td>현주소</td>
+                            <td><input class="form-control" type="text"></td>
+                            <td>전화번호</td>
+                            <td><input class="form-control" type="text" placeholder="###-####-####"></td>
+                          </tr>
+                          <tr class="text-center">
+                            <td>고등학교</td>
+                            <td colspan="4">
+                              <div class="text-center">
+                                <div>
+                                  <input type="text" style="width:100px;border: 1px solid #e0e3ec;">고등학교 &nbsp;&nbsp;
+                                  <input type="text" style="width:60px;border: 1px solid #e0e3ec;">년 &nbsp;&nbsp;
+                                  <input type="text" style="width:40px;border: 1px solid #e0e3ec;">월 &nbsp;&nbsp;
+                                  <input type="text" style="width:40px;border: 1px solid #e0e3ec;">일 &nbsp;&nbsp;&nbsp;&nbsp;
+                                  <input type="radio" name="highschoold" id="highschoold1">
+                                  <label for="highschoold1">졸업</label> /
+                                  <input type="radio" name="highschoold" id="highschoold2">
+                                  <label for="highschoold2">졸업예정</label>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="text-center">
+                            <td>대학교</td>
+                            <td colspan="4">
+                              <div>
+                                <input type="text" style="width:100px;border: 1px solid #e0e3ec;">대학교 &nbsp;&nbsp;
+                                <input type="text" style="width:60px;border: 1px solid #e0e3ec;">년 &nbsp;&nbsp;
+                                <input type="text" style="width:40px;border: 1px solid #e0e3ec;">월 &nbsp;&nbsp;
+                                <input type="text" style="width:40px;border: 1px solid #e0e3ec;">일 &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="university" id="university1">
+                                <label for="university1">졸업</label> /
+                                <input type="radio" name="university" id="university2">
+                                <label for="university2">졸업예정</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="text-center">
+                            <td rowspan="2">보호자성명</td>
+                            <td>부)성명</td>
+                            <td><input class="form-control" type="text"></td>
+                            <td>H.P</td>
+                            <td><input class="form-control" type="text" placeholder="###-####-####"></td>
+                          </tr>
+                          <tr class="text-center">
+                            <td>모)성명</td>
+                            <td><input class="form-control" type="text"></td>
+                            <td>H.P</td>
+                            <td><input class="form-control" type="text" placeholder="###-####-####"></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">입학제한</td>
+                            <td colspan="4">
+                              “정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 제3조 제1호에 따른 정신질환자, 마약, 대마, 향정신성의약품 중독자는 모집에서 제외하며 실습교육에 제한이 있을 수 있음을 알려드립니다. (조현병, 마약류 관리법 위반 등)<br>
+                              * 의료법을 위반한 경우 형집행이 종료된  (집행유예 및 벌금포함) 이후 시험응시가 가능함을 알려드립니다. (의료법 위반자만 해당) *
+                            </td>
+                          </tr>
+                          <tr class="text-center">
+                            <td colspan="5">
+                              <div>
+                                위의 본인은 소정의 서류를 귀하여 귀 학원의 ‘간호조무사’ 교육과정을 이수하고자 이에 지원합니다.
+                              </div>
+                              <br>
+                              <div>
+                                <input type="text" style="width:60px;border: 1px solid #e0e3ec;">년 &nbsp;&nbsp;
+                                <input type="text" style="width:40px;border: 1px solid #e0e3ec;">월 &nbsp;&nbsp;
+                                <input type="text" style="width:40px;border: 1px solid #e0e3ec;">일 &nbsp;&nbsp;&nbsp;&nbsp;
+                                지원자 성명<input type="text" style="width:100px;border: 1px solid #e0e3ec;"> &nbsp;&nbsp;(서명)
+                              </div>
+                              <br><br>
+                              <div class="text-left">
+                                <b>나주간호전문학원장</b> 귀하
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="text-center">
+                            <td>구 비 서 류</td>
+                            <td colspan="4">1.입학지원서 &nbsp;&nbsp;&nbsp; 2.사진2매</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <input type="button" class="btn btn-secondary" value="제출" />
+            </div>
+            <div class="row gutters">
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link active" href="../index.html">훈련생 훈련교육 만족도 설문</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./2_job_survey.html">구직욕구 자가진단 설문지</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./3_graduates_survey.html">훈련생과정 개발 설문지</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./4_privacy_agree.html">개인정보 활용동의서</a>
+              </div>
+              </div>
+            </div>
+            <div class="row gutters">
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./5_grievance.html">고충처리 대장</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./6_application_form.html">입학지원서</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./7_counseling_card.html">훈련생 설문카드</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./8_manage_card.html">훈련생 관리카드</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="target" style="display: none"></a>
+  <script src="../resource/js/jquery-1.10.2.min.js"></script>
+  <script src="../resource/js/bootstrap.bundle.min.js"></script>
+  <script src="./data/2_job_survey.js"></script>
+
+  <script type="text/javascript">
+
+    $(":button").on('click', function(e) {
+      html2canvas(e.target.parentElement).then(function(canvas) {
+        if (navigator.msSaveBlob) {
+          var blob = canvas.msToBlob(); 
+          return navigator.msSaveBlob(blob, '입학지원서.jpg'); 
+        } else { 
+          var el = document.getElementById("target");
+          el.href = canvas.toDataURL("image/jpeg");
+          el.download = '입학지원서.jpg';
+          el.click();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

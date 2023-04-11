@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>훈련생 설문상담카드</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../resource/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../resource/css/body.css" rel="stylesheet">
+  <script src="../resource/lib/jquery-3.3.1.min.js"></script>
+  <script src="../resource/lib/html2canvas.min.js"></script>
+  <script src="../resource/lib/es6-promise.min.js"></script>
+  <script src="../resource/lib/es6-promise.auto.min.js"></script> 
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row gutters">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="card">
+          <div class="card-body p-0">
+            <div class="invoice-container">
+              <div class="invoice-header">
+
+                <div class="row gutters text-center">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="invoice-logo">
+                      훈련생 설문상담카드
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row gutters">&nbsp;</div>
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <table class="table custom-table m-0">
+                      <thead>
+                        <tr>
+                          <th width="10%">훈련 과정명</th>
+                          <th width="20%">
+                            <input class="form-control" type="text">
+                          </th>
+                          <th width="10%">담임교사</th>
+                          <th width="20%">
+                            <input class="form-control" type="text">
+                          </th>
+                        </tr>
+                        <tr>
+                          <th width="10%">훈련생 이름</th>
+                          <th width="20%">
+                            <input class="form-control" type="text">
+                          </th>
+                          <th width="10%">취업담당자</th>
+                          <th width="20%">
+                            <input class="form-control" type="text">
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td colspan="4"><b>[상담 목표]</b></td>
+                        </tr>
+                        <tr>
+                          <td>훈련상담</td>
+                          <td colspan="3">
+                            교육난이도, 애로사항, 진로 상담 등을 통한 학습평가 및 개인적인 비젼을 제시한다<br>
+                            학습성취도, 훈련과정 요구조사 및 구체적인 진로상담을 통해 구직활동을 지원한다
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>취업상담</td>
+                          <td colspan="3">
+                            취업상담 : 취업희망내용, 취업준비 상태, 취업 자신감 등 파악<br>
+                            (취업희망조사 및 취업욕구조사 별도 작성)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>추가</td>
+                          <td colspan="3">
+                            고충상담, 신상상담 등 훈련생의 요청 또는 교사의 추가 상담
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="table-responsive">
+                      <table class="table custom-table m-0" id="table">
+                        <thead>
+                          <th colspan="4">[ 학 업 상 담 ]</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td colspan="4"><b> 1. 교육내용의 난이도는 어떠한가?</b></td>
+                          </tr>
+                          <tr>
+                            <td width="25%">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_1" id="row_1_1">
+                                <label for="row_1_1">어렵다</label>
+                              </div>
+                            </td>
+                            <td width="25%">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_1" id="row_1_2">
+                                <label for="row_1_2">보통수준이다</label>
+                              </div>
+                            </td>
+                            <td width="25%">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_1" id="row_1_3">
+                                <label for="row_1_3">낮은편이다</label>
+                              </div>
+                            </td>
+                            <td width="25%">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>2. 교육 이해도를 높이기 위한 방법은 무엇이라고 생각합니까?</b></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_2" id="row_2_1">
+                                <label for="row_2_1">보충교육</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_2" id="row_2_2">
+                                <label for="row_2_2">개인지도</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_2" id="row_2_3">
+                                <label for="row_2_3">연습문제 제공 후 개인피드백</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_2" id="row_2_4">
+                                <label for="row_2_4">참고자료 제공</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_2" id="row_2_7">
+                                <label for="row_2_7">기타요청</label>
+                              </div>
+                            </td>
+                            <td colspan="3">
+                              <input class="form-control" type="text">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>3. 이 교육과정이 자격증 취득 및  현장 실무 능력에 도움이 되리라고 생각합니까?</b></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_3" id="row_3_1">
+                                <label for="row_3_1">매우도움</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_3" id="row_3_2">
+                                <label for="row_3_2">도움</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_3" id="row_3_3">
+                                <label for="row_3_3">보통</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_3" id="row_3_4">
+                                <label for="row_3_4">아님</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_3" id="row_3_5">
+                                <label for="row_3_5">매우아님</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>4. 수료 후 희망하는 교육훈련 프로그램 및 교육기관은?</b></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4" id="row_4_1">
+                                <label for="row_4_1">과정결정</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4" id="row_4_2">
+                                <label for="row_4_2">결정</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4" id="row_4_3">
+                                <label for="row_4_3">미정 (교육기관 연계)</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4" id="row_4_4">
+                                <label for="row_4_4">과정 미결정 (가능훈련프로그램 정보제공)</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>5. 본인이 취업을 하는데 가장 큰 장애 요인은 무엇이라고 생각하십니까?</b></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_5" id="row_5_1">
+                                <label for="row_5_1">나이</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_5" id="row_5_2">
+                                <label for="row_5_2">전문기술력 부족</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_5" id="row_5_3">
+                                <label for="row_5_3">학벌의 부족</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_5" id="row_5_4">
+                                <label for="row_5_4">양육 문제</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_5" id="row_5_5">
+                                <label for="row_5_5">기타</label>
+                              </div>
+                            </td>
+                            <td colspan="3">
+                              <input class="form-control" type="text">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>상담 기록 사항</b></td>
+                          </tr>
+                          <tr>
+                            <td colspan="4">
+                              <textarea  class="form-control"></textarea>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">&nbsp;</div>
+                <div class="row">&nbsp;</div>
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="table-responsive">
+                      <table class="table custom-table m-0" id="table">
+                        <thead>
+                          <th colspan="4">[ 학습 성취도 상담 ]</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td colspan="4"><b>1. 현재 수업 중인 교과목의 성취도 정도는?</b></td>
+                          </tr>
+                          <tr>
+                            <td width="25%">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_6" id="row_6_1">
+                                <label for="row_6_1">우수(A)</label>
+                              </div>
+                            </td>
+                            <td width="25%">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_6" id="row_6_2">
+                                <label for="row_6_2">양호(B)</label>
+                              </div>
+                            </td>
+                            <td width="25%">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_6" id="row_6_3">
+                                <label for="row_6_3">보통(C)</label>
+                              </div>
+                            </td>
+                            <td width="25%">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_6" id="row_6_4">
+                                <label for="row_6_4">미흡(D)</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="25%">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_6" id="row_6_5">
+                                <label for="row_6_5">부진(E)</label>
+                              </div>
+                            </td>
+                            <td width="25%">&nbsp;</td>
+                            <td width="25%">&nbsp;</td>
+                            <td width="25%">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>2. 자격시험대비에 어려운 점은 없는가?</b></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_7" id="row_7_1">
+                                <label for="row_7_1">있음 (구체적으로 <input type="text" style="width:160px;border: 1px solid #e0e3ec;">)</label>
+                              </div>
+                            </td>
+                            <td colspan="2">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_7" id="row_7_2">
+                                <label for="row_7_2">없음</label>
+                              </div>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>3. 현재 훈련이수에 가장 많은 도움을 주고 있는 사람은?</b></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_8" id="row_8_1">
+                                <label for="row_8_1">담임교사</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_8" id="row_8_2">
+                                <label for="row_8_2">과목교사</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_8" id="row_8_3">
+                                <label for="row_8_3">원장</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_8" id="row_8_4">
+                                <label for="row_8_4">실습조장</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_8" id="row_8_5">
+                                <label for="row_8_5">기타</label>
+                              </div>
+                            </td>
+                            <td colspan="3">
+                              <input class="form-control" type="text">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>4. 예습 및 복습 등 정규훈련 시간 이외에 개별학습 시간은 ?</b></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_9" id="row_9_1">
+                                <label for="row_9_1">하루 1시간</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4" id="row_9_2">
+                                <label for="row_9_2">하루 2시간</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4" id="row_9_3">
+                                <label for="row_9_3">하루 3시간</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4" id="row_9_4">
+                                <label for="row_9_4">하루 4시간 이상</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>상담 기록 사항</b></td>
+                          </tr>
+                          <tr>
+                            <td colspan="4">
+                              <textarea  class="form-control"></textarea>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">&nbsp;</div>
+                <div class="row">&nbsp;</div>
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="table-responsive">
+                      <table class="table custom-table m-0" id="table">
+                        <thead>
+                          <th colspan="4">[ 취 업 상 담 ]</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td colspan="4"><b>1. 수료한 과정과 연계된 업종에 종사할 예정입니까?</b></td>
+                          </tr>
+                          <tr>
+                            <td width="25%">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_10" id="row_10_1">
+                                <label for="row_10_1">예</label>
+                              </div>
+                            </td>
+                            <td width="25%">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_10" id="row_10_2">
+                                <label for="row_10_2">아니오</label>
+                              </div>
+                            </td>
+                            <td width="25%">&nbsp;</td>
+                            <td width="25%">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>2. 개인적으로 구직활동을 진행 또는 준비중입니까?</b></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_11" id="row_11_1">
+                                <label for="row_11_1">예</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_11" id="row_11_2">
+                                <label for="row_11_2">면접횟수 ( <input type="text" style="width:30px;border: 1px solid #e0e3ec;">회)</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_11" id="row_11_3">
+                                <label for="row_11_3">아니오</label>
+                              </div>
+                            </td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>3. 구직활동 중이라면, 어떤 경로를 이용하고 계십니까?</b></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_12" id="row_12_1">
+                                <label for="row_12_1">매우도움</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_12" id="row_12_2">
+                                <label for="row_12_2">도움</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_12" id="row_12_3">
+                                <label for="row_12_3">보통</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_12" id="row_12_4">
+                                <label for="row_12_4">아님</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_12" id="row_12_5">
+                                <label for="row_12_5">기타</label>
+                              </div>
+                            </td>
+                            <td colspan="3"><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>4. 구직활동을 하고 있지 않다면 언제부터 구직활동을 계획하십니까?</b></td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>5. 구직활동에 애로사항이 있습니까?</b></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_14" id="row_14_1">
+                                <label for="row_14_1">근무시간</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_14" id="row_14_2">
+                                <label for="row_14_2">육아</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_5" id="row_14_3">
+                                <label for="row_14_3">건강</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_14" id="row_14_4">
+                                <label for="row_14_4">이동거리</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_14" id="row_14_5">
+                                <label for="row_14_5">급여</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_14" id="row_14_6">
+                                <label for="row_14_6">경력</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_14" id="row_14_7">
+                                <label for="row_14_7">연령문제</label>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_14" id="row_14_8">
+                                <label for="row_14_8">학력문제</label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_14" id="row_14_9">
+                                <label for="row_14_9">기타</label>
+                              </div>
+                            </td>
+                            <td  colspan="3"><input class="form-control" type="text"></td>
+                          </tr>
+                          <tr>
+                            <td colspan="4"><b>상담 기록 사항</b></td>
+                          </tr>
+                          <tr>
+                            <td colspan="4">
+                              <textarea  class="form-control"></textarea>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <input type="button" class="btn btn-secondary" value="제출" />
+            </div>
+            <div class="row gutters">
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link active" href="../index.html">훈련생 훈련교육 만족도 설문</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./2_job_survey.html">구직욕구 자가진단 설문지</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./3_graduates_survey.html">훈련생과정 개발 설문지</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./4_privacy_agree.html">개인정보 활용동의서</a>
+              </div>
+              </div>
+            </div>
+            <div class="row gutters">
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./5_grievance.html">고충처리 대장</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./6_application_form.html">입학지원서</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./7_counseling_card.html">훈련생 설문카드</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./8_manage_card.html">훈련생 관리카드</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="target" style="display: none"></a>
+  <script src="../resource/js/jquery-1.10.2.min.js"></script>
+  <script src="../resource/js/bootstrap.bundle.min.js"></script>
+  <script src="./data/2_job_questionnaire.js"></script>
+
+  <script type="text/javascript">
+
+    $(":button").on('click', function(e) {
+      html2canvas(e.target.parentElement).then(function(canvas) {
+        if (navigator.msSaveBlob) {
+          var blob = canvas.msToBlob(); 
+          return navigator.msSaveBlob(blob, '훈련생설문상담카드.jpg'); 
+        } else { 
+          var el = document.getElementById("target");
+          el.href = canvas.toDataURL("image/jpeg");
+          el.download = '훈련생설문상담카드.jpg';
+          el.click();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

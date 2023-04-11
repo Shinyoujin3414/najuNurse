@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>교육 평가 설문지</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./resource/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./resource/css/body.css" rel="stylesheet">
+  <script src="./resource/lib/jquery-3.3.1.min.js"></script>
+  <script src="./resource/lib/html2canvas.min.js"></script>
+  <script src="./resource/lib/es6-promise.min.js"></script>
+  <script src="./resource/lib/es6-promise.auto.min.js"></script> 
+</head>
+
+<body>
+  <div class="container">
+    <div class="row gutters">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="card">
+          <div class="card-body p-0">
+            <div class="invoice-container">
+              <div class="invoice-header">
+
+                <div class="row gutters text-center">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="invoice-logo">
+                      교육 평가 설문지
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h5>
+                      ● 훈련과정명 : 간호조무사 자격취득과정
+                    </h5>
+                  </div>
+                </div>
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="invoice-details">
+                      <address>
+                        본 설문서는 교육과정의 평가와 차기교육과정 계획수립에 참고하고자 하는 것으로, 교육중 느낀 점을 기록하여 주시기 바랍니다.
+                      </address>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="invoice-body">
+
+                <div class="row gutters">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="table-responsive">
+                      <table class="table custom-table m-0">
+                        <thead>
+                          <tr>
+                            <th width="10%">구분</th>
+                            <th width="50%">설문내용</th>
+                            <th width="8%">전혀 그렇지 않다</th>
+                            <th width="8%">대체로 그렇지 않다</th>
+                            <th width="8%">보통이다</th>
+                            <th width="8%">대체로 그렇다</th>
+                            <th width="8%">매우 그렇다</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="border-bottom:none;">교육과정에 대한 설문</td>
+                            <td>1. 본 과정 참여에 전반적으로 만족하십니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_1">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_1">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_1">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_1">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_1">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-bottom:none;border-top:none;"></td>
+                            <td>2. 본 과정이 제시된 훈련생의 수준에 적합한 내용으로 구성되었다고 생각하십니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_2">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_2">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_2">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_2">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_2">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-bottom:none;border-top:none;"></td>
+                            <td>3. 본 과정의 목적과 커리큘럼(교육내용)이 일치 하고 있습니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_3">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_3">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_3">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_3">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_3">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-bottom:none;border-top:none;"></td>
+                            <td>4. 본 과정이 향후에 귀하의 직무에 얼마나 도움이 될 것으로 기대하십니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_4">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-top:none;"></td>
+                            <td colspan="6">
+                              <input class="form-control" \type="text" placeholder="* 기타 의견을 주시면 향후 과정에 적극 반영하겠습니다." value="">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-bottom:none;">교육운영에 대한 설문</td>
+                            <td>5. 교육운영이 전반적으로 원할히 진행되었다고 생각하십니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_5">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_5">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_5">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_5">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_5">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-top:none;border-bottom:none;"></td>
+                            <td>6. 행정, 상담실 직원들이 친절하고 적극적으로 응대하십니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_6">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_6">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_6">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_6">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_6">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-top:none;"></td>
+                            <td colspan="6">
+                              <input class="form-control" \type="text" placeholder="* 기타 의견을 주시면 향후 과정에 적극 반영하겠습니다." value="">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-bottom:none;">강사에 대한 설문</td>
+                            <td>7. 교사가 학습내용에 맞추어 잘 진행하였다고 생각하십니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_7">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_7">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_7">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_7">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_7">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-bottom:none;border-top:none;"></td>
+                            <td>8. 교사가 수업에 대한 전문지식과 열의를 가지며 교육하였다고 생각하십니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_8">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_8">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_8">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_8">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_8">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-bottom:none;border-top:none;"></td>
+                            <td>9. 교․강사가 훈련생의 참여를 잘 유도하였습니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_9">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_9">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_9">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_9">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_9">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-top:none;"></td>
+                            <td colspan="6">
+                              <input class="form-control" type="text" placeholder="* 가장 유익한 수업내용은?(없을시 공란)" value="">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-bottom:none;">교육환경에 대한 설문</td>
+                            <td>10. 교육에 필요한 기자재가 갖추어져 있습니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_10">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_10">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_10">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_10">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_10">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-bottom:none;border-top:none;"></td>
+                            <td>11. 강의실이 교육을 수업하기에 적합합니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_11">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_11">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_11">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_11">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_11">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-bottom:none;border-top:none;"></td>
+                            <td>12. 편의시설이 사용하기에 적합하였습니까?</td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_12">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_12">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_12">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_12">
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="row_12">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-top:none;"></td>
+                            <td colspan="6">
+                              <input class="form-control" type="text" placeholder="* 기타 의견을 주시면 향후 과정에 적극 반영하겠습니다." value="">
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <input type="button" class="btn btn-secondary" value="제출" />
+            </div>
+            <div class="row gutters">
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link active" href="./index.html">훈련생 훈련교육 만족도 설문</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./page/2_job_survey.html">구직욕구 자가진단 설문지</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./page/3_graduates_survey.html">훈련생과정 개발 설문지</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./page/4_privacy_agree.html">개인정보 활용동의서</a>
+              </div>
+              </div>
+            </div>
+            <div class="row gutters">
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./page/5_grievance.html">고충처리 대장</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./page/6_application_form.html">입학지원서</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./page/7_counseling_card.html">훈련생 설문카드</a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6">
+                <a class="nav-link" href="./page/8_manage_card.html">훈련생 관리카드</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="target" style="display: none"></a>
+  <script src="./resource/js/jquery-1.10.2.min.js"></script>
+  <script src="./resource/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+    $(":button").on('click', function(e) {
+      html2canvas(e.target.parentElement).then(function(canvas) {
+        if (navigator.msSaveBlob) {
+          var blob = canvas.msToBlob(); 
+          return navigator.msSaveBlob(blob, '교육평가설문지.jpg'); 
+        } else { 
+          var el = document.getElementById("target");
+          el.href = canvas.toDataURL("image/jpeg");
+          el.download = '교육평가설문지.jpg';
+          el.click();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
